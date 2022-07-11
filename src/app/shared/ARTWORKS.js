@@ -6,7 +6,7 @@ import FaustoMelotti1 from '../assets/img/FaustoMelotti-1.jpg';
 export const ARTWORKS = [
     {
         id: 0,
-        name: 'Il Mio Buco Nel Cielo',
+        name: 'Bukichi Inoue - Il Mio Buco Nel Cielo',
         image: BucoNelCielo1,
         elevation: 1233,
         featured: false,
@@ -15,7 +15,7 @@ export const ARTWORKS = [
     },
     {
         id: 1,
-        name: 'Daniel Buren',
+        name: 'Daniel Buren - La Cabane éclatée aux 4 salles',
         image: DanielBuren1,
         elevation: 877,
         featured: false,
@@ -24,7 +24,7 @@ export const ARTWORKS = [
     },
     {
         id: 2,
-        name: 'Danny Karavan - Gerusalemme',
+        name: 'Dani Karavan - Gerusalemme',
         image: gerusalemmeComplete2,
         elevation: 2901,
         featured: false,
@@ -33,7 +33,7 @@ export const ARTWORKS = [
     },
     {
         id: 3,
-        name: 'Fausto Melotti',
+        name: 'Fausto Melotti - Tema e variazioni II',
         image: FaustoMelotti1,
         elevation: 42,
         featured: true,
