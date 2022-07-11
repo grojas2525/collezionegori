@@ -1,6 +1,10 @@
-import React from 'react';
-import { Container, Navbar, NavbarBrand } from 'reactstrap';
-import GoriLogo from './app/assets/img/GoriLogo.png';
+//import React from 'react';
+//import { Container, Navbar, NavbarBrand } from 'reactstrap';
+//import GoriLogo from './app/assets/img/GoriLogo.png';
+import ArtworksList from './features/artworks/ArtworksList.js';
+//import { ARTWORKS } from './app/shared/ARTWORKS';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 import './App.css';
@@ -8,14 +12,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Navbar dark color='primary' sticky='top' expand='md'>
-               <Container>
-                    <NavbarBrand href='/'>
-                        <img src={GoriLogo} alt='gori logo' />
-                    </NavbarBrand>
-                </Container>
-            </Navbar>
-            Gori Collection - Pistoia, Italy
+        <Header/>
+        <ArtworksList />
+        <Footer/>
+
     </div>
   );
 }

@@ -1,13 +1,13 @@
-import reactLakeImg from '../assets/img/react-lake.jpg';
-import chromeRiverImg from '../assets/img/chrome-river.jpg';
-import breadCrumbImg from '../assets/img/breadcrumb-trail.jpg';
-import reduxWoodsImg from '../assets/img/redux-woods.jpg';
+import BucoNelCielo1 from '../assets/img/BucoNelCielo-1.jpg';
+import DanielBuren1 from '../assets/img/DanielBuren-1.jpg';
+import gerusalemmeComplete2 from '../assets/img/gerusalemmeComplete-2.jpg';
+import FaustoMelotti1 from '../assets/img/FaustoMelotti-1.jpg';
 
-export const CAMPSITES = [
+export const ARTWORKS = [
     {
         id: 0,
-        name: 'React Lake Campground',
-        image: reactLakeImg,
+        name: 'Il Mio Buco Nel Cielo',
+        image: BucoNelCielo1,
         elevation: 1233,
         featured: false,
         description:
@@ -15,8 +15,8 @@ export const CAMPSITES = [
     },
     {
         id: 1,
-        name: 'Chrome River Campground ',
-        image: chromeRiverImg,
+        name: 'Daniel Buren',
+        image: DanielBuren1,
         elevation: 877,
         featured: false,
         description:
@@ -24,8 +24,8 @@ export const CAMPSITES = [
     },
     {
         id: 2,
-        name: 'Breadcrumb Trail Campground',
-        image: breadCrumbImg,
+        name: 'Danny Karavan - Gerusalemme',
+        image: gerusalemmeComplete2,
         elevation: 2901,
         featured: false,
         description:
@@ -33,8 +33,8 @@ export const CAMPSITES = [
     },
     {
         id: 3,
-        name: 'Redux Woods Campground',
-        image: reduxWoodsImg,
+        name: 'Fausto Melotti',
+        image: FaustoMelotti1,
         elevation: 42,
         featured: true,
         description:
