@@ -1,24 +1,22 @@
-import { Container, Row, Col, Button } from 'reactstrap';
+import {useState} from 'react';
+import { Container, Row, Col } from 'reactstrap';
 import ArtworkDetail from '../features/artworks/ArtworkDetail';
 import ArtworksList from '../features/artworks/ArtworksList';
-import { selectRandomArtwork } from '../features/artworks/artworksSlice';
+import { selectArtworkById } from '../features/artworks/ArtworksSlice';
+import React from 'react';
 
 const ArtworksDirectoryPage = () => {
-    let selectedArtwork = selectRandomArtwork();
 
-    const toggleArtwork = () => {
-        selectedArtwork = selectRandomArtwork();
-        console.log(selectedArtwork);
-    };
+    const [artworkId, setArtworkId] = useState(0);
+    const selectedArtwork = selectArtworkById(artworkId);
+
 
     return (
         <Container>
-            <Button onClick={() => toggleArtwork()}>
-                Select Random Artwork
-            </Button>
+            
             <Row>
                 <Col sm='5' md='7'>
-                    <ArtworksList/>
+                    <ArtworksList setArtworkId={setArtworkId}/>
                 </Col>
 
                 <Col sm='7' md='5'>
