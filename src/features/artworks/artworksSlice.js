@@ -11,3 +11,7 @@ export const selectAllArtworks = () => {
 export const selectArtworkById = (id) => {
     return ARTWORKS.find((artwork) => artwork.id === id);
 };
+
+export const selectFeaturedArtwork = () => {
+    return ARTWORKS.find((artwork) => artwork.featured);
+};
