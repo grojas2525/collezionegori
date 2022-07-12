@@ -2,6 +2,9 @@
 //import { Container, Navbar, NavbarBrand } from 'reactstrap';
 //import GoriLogo from './app/assets/img/GoriLogo.png';
 import ArtworksDirectoryPage from './pages/ArtworksDirectoryPage';
+import { Routes, Route } from 'react-router-dom';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
 //import { ARTWORKS } from './app/shared/ARTWORKS';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,7 +15,11 @@ function App() {
     <div className="App">
 
         <Header/>
-        <ArtworksDirectoryPage />
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='contact' element={<ContactPage />} />
+            <Route path='directory' element={<ArtworksDirectoryPage />} />
+          </Routes>
         <Footer/>
 
     </div>
