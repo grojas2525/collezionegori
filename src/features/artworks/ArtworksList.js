@@ -3,7 +3,7 @@ import {Col, Row} from 'reactstrap';
 import ArtworkCard from "./ArtworkCard";
 import { selectAllArtworks } from './ArtworksSlice';
 
-const ArtworksList = ({setArtworkId}) => {
+const ArtworksList = () => {
     const artworks = selectAllArtworks();
 
     return (
@@ -13,15 +13,14 @@ const ArtworksList = ({setArtworkId}) => {
                         <Col 
                             md='5' 
                             className='m-4' 
-                            key={artwork.id} 
-                            onClick={() => setArtworkId(artwork.id)}
+                            key={artwork.id}
                         >
                             <ArtworkCard artwork={artwork} />
                         </Col>
                     );
                 })}
         </Row>
-    )
-}
+    );
+};
 
 export default ArtworksList;

@@ -9,7 +9,7 @@ export const selectAllArtworks = () => {
 //};
 
 export const selectArtworkById = (id) => {
-    return ARTWORKS.find((artwork) => artwork.id === id);
+    return ARTWORKS.find((artwork) => artwork.id === parseInt(id));
 };
 
 export const selectFeaturedArtwork = () => {

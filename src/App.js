@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage';
 //import { ARTWORKS } from './app/shared/ARTWORKS';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ArtworkDetailPage from './pages/ArtworkDetailPage';
+
 import './App.css';
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='contact' element={<ContactPage />} />
             <Route path='directory' element={<ArtworksDirectoryPage />} />
+            <Route path='directory/:artworkId' element={<ArtworkDetailPage />} />
           </Routes>
         <Footer/>
 
