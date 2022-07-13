@@ -2,6 +2,8 @@ import { Container, Row } from "reactstrap";
 import { useParams } from "react-router-dom";
 import { selectArtworkById } from "../features/artworks/ArtworksSlice";
 import ArtworkDetail from "../features/artworks/ArtworkDetail";
+import SubHeader from '../components/SubHeader';
+
 
 const ArtworkDetailPage = () => {
     const {artworkId} = useParams();
@@ -9,6 +11,8 @@ const ArtworkDetailPage = () => {
 
     return (
         <Container>
+            <SubHeader current={artwork.name} detail={true} />
+
             <Row>
                 <ArtworkDetail artwork={artwork} />
             </Row>
