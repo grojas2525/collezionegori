@@ -18,7 +18,7 @@ export const ARTWORKS = [
         name: 'Daniel Buren - La Cabane éclatée aux 4 salles',
         image: DanielBuren1,
         elevation: 877,
-        featured: false,
+        featured: true,
         description:
             'Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River.'
     },
@@ -36,7 +36,7 @@ export const ARTWORKS = [
         name: 'Fausto Melotti - Tema e variazioni II',
         image: FaustoMelotti1,
         elevation: 42,
-        featured: true,
+        featured: false,
         description:
             "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
     }

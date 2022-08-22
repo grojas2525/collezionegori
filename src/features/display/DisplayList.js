@@ -1,18 +1,22 @@
 import { Col, Row } from 'reactstrap';
-import DisplayCard from './DisplayCard';
+//import DisplayCard from './DisplayCard';
 import { selectFeaturedArtwork } from '../artworks/ArtworksSlice';
 import { selectFeaturedPromotion } from '../promotions/promotionsSlice';
+import { selectFeaturedArtist } from '../artists/artistsSlice';
+import AnimatedDisplayCard from '../display/AnimatedDisplayCard';
 
 const DisplayList = () => {
-    const items = [selectFeaturedArtwork(), selectFeaturedPromotion()];
+    const items = [selectFeaturedArtwork(), selectFeaturedPromotion(), selectFeaturedArtist()];
 
     return (
         <Row>
             {items.map((item, idx) => {
                 return (
-                    <Col md className='m-1' key={idx}>
-                        <DisplayCard item={item} />
-                    </Col>
+                    item && (
+                        <Col md className='m-1' key={idx}>
+                            <AnimatedDisplayCard item={item} />
+                        </Col>
+                    )
                 );
             })}
         </Row>

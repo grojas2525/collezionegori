@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 //import { ARTWORKS } from './app/shared/ARTWORKS';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import AboutPage from './pages/AboutPage';
 import ArtworkDetailPage from './pages/ArtworkDetailPage';
 
 import './App.css';
@@ -22,6 +23,9 @@ function App() {
             <Route path='contact' element={<ContactPage />} />
             <Route path='directory' element={<ArtworksDirectoryPage />} />
             <Route path='directory/:artworkId' element={<ArtworkDetailPage />} />
+            <Route path='contact' element={<ContactPage />} />
+            <Route path='about' element={<AboutPage />} />
+
           </Routes>
         <Footer/>
 
