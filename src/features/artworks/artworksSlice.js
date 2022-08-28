@@ -1,4 +1,16 @@
 import { ARTWORKS } from "../../app/shared/ARTWORKS";
+import createSlice from "@reduxjs/toolkit";
+
+const initialState = {
+    artworksArray: ARTWORKS
+};
+
+const artworksSlice = createSlice({
+    name: 'artworks',
+    initialState
+});
+
+export const artworksReducer = artworksSlice.reducer;
 
 export const selectAllArtworks = () => {
     return ARTWORKS
@@ -15,3 +27,6 @@ export const selectArtworkById = (id) => {
 export const selectFeaturedArtwork = () => {
     return ARTWORKS.find((artwork) => artwork.featured);
 };
+
+
+
