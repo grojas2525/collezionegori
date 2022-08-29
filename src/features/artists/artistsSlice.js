@@ -1,12 +1,23 @@
 import { ARTISTS } from "../../app/shared/ARTISTS";
+import { createSlice} from "@reduxjs/toolkit";
 
-
-export const selectAllArtists = () => {
-    return ARTISTS
+const initialState = {
+    artistsArray: ARTISTS
 };
 
-export const selectFeaturedArtist = () => {
-    return ARTISTS.find((artist) => artist.featured);
+const artistsSlice = createSlice({
+    name: 'artists',
+    initialState
+});
+
+export const artistsReducer = artistsSlice.reducer;
+
+export const selectAllArtists = (state) => {
+    return state.artists.artistsArray;
+};
+
+export const selectFeaturedArtist = (state) => {
+    return state.artists.artistsArray.find((artist) => artist.featured);
 };
 
 

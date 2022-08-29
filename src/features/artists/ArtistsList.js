@@ -1,9 +1,10 @@
 import {Col} from 'reactstrap';
 import Artist from "./Artist";
 import { selectAllArtists } from './artistsSlice';
+import {useSelector} from 'react-redux';
 
 const ArtistsList = () => {
-    const artists = selectAllArtists();
+    const artists = useSelector(selectAllArtists);
 
     return (
         <Col className='mt-4'>
