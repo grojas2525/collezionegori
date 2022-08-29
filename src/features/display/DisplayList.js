@@ -4,9 +4,17 @@ import { selectFeaturedArtwork } from '../artworks/ArtworksSlice';
 import { selectFeaturedPromotion } from '../promotions/promotionsSlice';
 import { selectFeaturedArtist } from '../artists/artistsSlice';
 import AnimatedDisplayCard from '../display/AnimatedDisplayCard';
+import { useSelector } from 'react-redux';
 
 const DisplayList = () => {
-    const items = [selectFeaturedArtwork(), selectFeaturedPromotion(), selectFeaturedArtist()];
+
+    const items = useSelector((state) => 
+        [ selectFeaturedArtwork(state), 
+            selectFeaturedPromotion(state), 
+            selectFeaturedArtist(state)
+        ]);
+
+        console.log('display items:', items);
 
     return (
         <Row>

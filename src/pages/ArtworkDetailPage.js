@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import { selectArtworkById } from "../features/artworks/ArtworksSlice";
 import ArtworkDetail from "../features/artworks/ArtworkDetail";
 import SubHeader from '../components/SubHeader';
-
+import { useSelector } from "react-redux";
 
 const ArtworkDetailPage = () => {
     const {artworkId} = useParams();
-    const artwork = selectArtworkById(artworkId);
+    const artwork = useSelector(selectArtworkById(artworkId));
+    console.log('artwork:', artwork);
 
     return (
         <Container>

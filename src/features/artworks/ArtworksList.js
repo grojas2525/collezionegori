@@ -2,9 +2,13 @@
 import {Col, Row} from 'reactstrap';
 import ArtworkCard from "./ArtworkCard";
 import { selectAllArtworks } from './ArtworksSlice';
+import {useSelector} from 'react-redux';
 
 const ArtworksList = () => {
-    const artworks = selectAllArtworks();
+    const artworks = useSelector(selectAllArtworks);
+
+    console.log('artworks:', artworks);
+
 
     return (
         <Row className='ms-auto'>

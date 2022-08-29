@@ -1,5 +1,5 @@
 import { ARTWORKS } from "../../app/shared/ARTWORKS";
-import createSlice from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
     artworksArray: ARTWORKS
@@ -12,21 +12,19 @@ const artworksSlice = createSlice({
 
 export const artworksReducer = artworksSlice.reducer;
 
-export const selectAllArtworks = () => {
-    return ARTWORKS
+export const selectAllArtworks = (state) => {
+    return state.artworks.artworksArray;
 };
+
+export const selectArtworkById = (id) => (state) => {
+    return state.artworks.artworksArray.find((artwork) => artwork.id === parseInt(id));
+};
+
+export const selectFeaturedArtwork = (state) => {
+    return state.artworks.artworksArray.find((artwork) => artwork.featured);
+};
+
 
 //export const selectRandomArtwork = () => {
  //   return ARTWORKS[Math.floor(ARTWORKS.length * Math.random())];
 //};
-
-export const selectArtworkById = (id) => {
-    return ARTWORKS.find((artwork) => artwork.id === parseInt(id));
-};
-
-export const selectFeaturedArtwork = () => {
-    return ARTWORKS.find((artwork) => artwork.featured);
-};
-
-
-
