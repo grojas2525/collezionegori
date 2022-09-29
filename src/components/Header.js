@@ -26,7 +26,7 @@ const Header = () => {
 
                     <NavItem>
                         <NavLink className='nav-link' to='/directory'>
-                            <i className='fa fa-list fa-lg' /> Directory
+                            <i className='fa fa-list fa-lg' /> Collection
                         </NavLink>  
                     </NavItem>
 

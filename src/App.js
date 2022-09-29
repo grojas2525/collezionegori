@@ -10,10 +10,20 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import ArtworkDetailPage from './pages/ArtworkDetailPage';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchArtworks } from './features/artworks/ArtworksSlice';
 
 import './App.css';
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchArtworks());
+  }, [dispatch]);
+
   return (
     <div className="App">
 

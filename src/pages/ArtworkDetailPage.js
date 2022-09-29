@@ -17,6 +17,7 @@ const ArtworkDetailPage = () => {
             <Row>
                 <ArtworkDetail artwork={artwork} />
             </Row>
+
         </Container>
     )
 }

@@ -1,0 +1,109 @@
+{
+  "artworks": [
+    {
+      "id": 0,
+      "name": "React Lake Campground",
+      "image": "images/react-lake.jpg",
+      "elevation": 1233,
+      "featured": false,
+      "description": "Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers."
+    },
+    {
+      "id": 1,
+      "name": "Chrome River Campground",
+      "image": "images/chrome-river.jpg",
+      "elevation": 877,
+      "featured": false,
+      "description": "Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River."
+    },
+    {
+      "id": 2,
+      "name": "Breadcrumb Trail Campground",
+      "image": "images/breadcrumb-trail.jpg",
+      "elevation": 2901,
+      "featured": false,
+      "description": "Let NuCamp be your guide to this off-the-beaten-path, hike-in-only campground."
+    },
+    {
+      "id": 3,
+      "name": "Redux Woods Campground",
+      "image": "images/redux-woods.jpg",
+      "elevation": 42,
+      "featured": true,
+      "description": "You'll never want to leave this hidden gem, deep within the lush Redux Woods."
+    }
+  ],
+  
+  "artists": [
+    {
+      "id": 0,
+      "name": "Bootstrap Outfitters",
+      "image": "images/bootstrap-logo.png",
+      "featured": false,
+      "description": "Bootstrap Outfitters supplies you with the gear you need at prices you can't beat."
+    },
+    {
+      "id": 1,
+      "name": "Git Out Expeditions",
+      "image": "images/git-logo.png",
+      "featured": false,
+      "description": "Join Git Out Expeditions to explore new horizons with a group of other adventurers!"
+    },
+    {
+      "id": 2,
+      "name": "Mongo Fly Shop",
+      "image": "images/mongo-logo.png",
+      "featured": false,
+      "description": "Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop."
+    },
+    {
+      "id": 3,
+      "name": "Node Outdoor Apparel",
+      "image": "images/node-logo.png",
+      "featured": true,
+      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
+    }
+  ],
+  "promotions": [
+    {
+      "id": 0,
+      "name": "Mountain Adventure",
+      "image": "images/breadcrumb-trail.jpg",
+      "featured": true,
+      "description": "Book a 5-day mountain trek with a seasoned outdoor guide! Fly fishing equipment and lessons provided."
+    },
+    {
+      "id": 1,
+      "name": "Into The Weeds",
+      "image": "images/weeds.jpg",
+      "featured": false,
+      "description": "5 days deep in the Redux National Monument, far from the beaten path, with only a reducer in your backpack.  Guide provided."
+    },
+    {
+      "id": 2,
+      "name": "Bootstrap Teardown",
+      "image": "images/boots.jpg",
+      "featured": false,
+      "description": "In this weekend workshop we'll rebuild your bootstraps from scratch, so you're ready for next-level excursions."
+    },
+    {
+      "id": 3,
+      "name": "Asynchronous Rendezvous",
+      "image": "images/promise-mountain.jpg",
+      "featured": false,
+      "description": "Meet up with your guide at the top of Promise Mountain.  Or, try to.  Good luck!"
+    }
+  ],
+  "feedback": [
+    {
+      "id": 0,
+      "firstname": "Test",
+      "lastname": "Test",
+      "phoneNum": "12345",
+      "email": "test@test.com",
+      "agree": true,
+      "contactType": "Email",
+      "feedback": "test"
+    }
+  ]
+}

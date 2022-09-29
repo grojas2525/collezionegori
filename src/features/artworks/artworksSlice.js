@@ -1,13 +1,44 @@
-import { ARTWORKS } from "../../app/shared/ARTWORKS";
-import {createSlice} from "@reduxjs/toolkit";
+//import { ARTWORKS } from "../../app/shared/oldData/ARTWORKS";
+import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+import { baseUrl } from "../../app/shared/baseUrl";
+import { mapImageURL } from "../../utils/mapImageURL";
+
+export const fetchArtworks = createAsyncThunk(
+    'artworks/fetchArtworks',
+    async () => {
+        const response = await fetch(baseUrl + 'artworks');
+        if (!response.ok) {
+            return Promise.reject('Unable to fetch, status: ' + response.status);
+        }
+        const data = await response.json();
+        return data;
+    }
+);
 
 const initialState = {
-    artworksArray: ARTWORKS
+    artworksArray: [],
+    isLoading: true,
+    errMsg: ''
 };
 
 const artworksSlice = createSlice({
     name: 'artworks',
-    initialState
+    initialState,
+    reducers: {},
+    extraReducers: {
+        [fetchArtworks.pending]: (state) => {
+            state.isLoading = true;
+        },
+        [fetchArtworks.fulfilled]: (state, action) => {
+            state.isLoading = false;
+            state.errMsg = '';
+            state.artworksArray = mapImageURL(action.payload);
+        },
+        [fetchArtworks.rejected]: (state, action) => {
+            state.isLoading = false;
+            state.errMsg = action.error ? action.error.message : 'Fetch failed';
+        }
+    }
 });
 
 export const artworksReducer = artworksSlice.reducer;

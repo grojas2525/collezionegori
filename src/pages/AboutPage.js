@@ -1,6 +1,6 @@
 import {Col, Row, Container, Card, CardBody, CardHeader} from 'reactstrap';
 import SubHeader from '../components/SubHeader';
-import ArtistsList from '../features/artists/ArtistsList';
+//import ArtistsList from '../features/artists/ArtistsList';
 
 
 const AboutPage = () => {
@@ -70,12 +70,6 @@ const AboutPage = () => {
                 </Col>
             </Row>
 
-            <Row className='row-content'>
-                <Col xs='12'>
-                    <h3>Artists</h3>
-                </Col>
-                <ArtistsList/>
-            </Row>
         </Container>
     );
 };
