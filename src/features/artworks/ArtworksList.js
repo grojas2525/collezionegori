@@ -3,9 +3,29 @@ import {Col, Row} from 'reactstrap';
 import ArtworkCard from "./ArtworkCard";
 import { selectAllArtworks } from './ArtworksSlice';
 import {useSelector} from 'react-redux';
+import Error from '../../components/Error';
+import Loading from '../../components/Loading';
 
 const ArtworksList = () => {
     const artworks = useSelector(selectAllArtworks);
+    const isLoading = useSelector((state) => state.artworks.isLoading);
+    const errMsg = useSelector((state) => state.artworks.errMsg);
+
+    if (isLoading) {
+        return (
+            <Row>
+                <Loading />
+            </Row>
+        );
+    }
+
+    if (errMsg) {
+        return (
+            <Row>
+                <Error errMsg={errMsg} />
+            </Row>
+        );
+    }
 
     console.log('artworks:', artworks);
 

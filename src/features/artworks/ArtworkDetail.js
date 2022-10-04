@@ -1,5 +1,6 @@
 import {Card, CardImg, CardText, CardBody, Col} from 'reactstrap';
 
+
 const ArtworkDetail = ({artwork}) => {
     const {image, name, description} = artwork;
 
