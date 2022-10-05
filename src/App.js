@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchArtworks } from './features/artworks/ArtworksSlice';
 import { fetchArtists } from './features/artists/artistsSlice';
+import { fetchPromotions } from './features/promotions/promotionsSlice';
 
 import './App.css';
 
@@ -24,6 +25,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchArtworks());
     dispatch(fetchArtists());
+    dispatch(fetchPromotions());
   }, [dispatch]);
 
   return (
