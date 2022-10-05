@@ -13,6 +13,7 @@ import ArtworkDetailPage from './pages/ArtworkDetailPage';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchArtworks } from './features/artworks/ArtworksSlice';
+import { fetchArtists } from './features/artists/artistsSlice';
 
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchArtworks());
+    dispatch(fetchArtists());
   }, [dispatch]);
 
   return (
